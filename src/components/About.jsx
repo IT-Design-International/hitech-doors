@@ -20,8 +20,8 @@ export default function About() {
           <Reveal className="relative">
             <div className="relative">
               <img
-                src="/images/about.jpg"
-                alt="Hi-Tech Doors installation team at work in Port Elizabeth"
+                src="/images/Roll-Up Garage Doors Industrial Roller Shutters.jpg"
+                alt="Modern garage door installation by Hi-Tech Doors Port Elizabeth"
                 className="w-full object-cover"
                 style={{ aspectRatio: '4/3' }}
               />
