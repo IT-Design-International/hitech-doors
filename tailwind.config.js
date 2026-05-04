@@ -11,7 +11,7 @@ export default {
         bgSecondary: '#EEF1F5',
         bgSurface:   '#FFFFFF',
         bgDeep:      '#1C4060',
-        accent:      { DEFAULT: '#F47520', hover: '#D4611A', soft: '#FDE8D4' },
+        accent:      { DEFAULT: '#DE2922', hover: '#B82220', soft: '#FCE4E3' },
         teal:        { DEFAULT: '#2AACAC', light: '#E6F7F7' },
         ink:         { DEFAULT: '#1A2535', secondary: '#3D4F63', muted: '#6B7F95' },
         line:        { DEFAULT: '#D1DCE8', subtle: '#E8EEF4' },
