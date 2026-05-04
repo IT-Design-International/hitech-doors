@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X, Phone, MapPin, ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -24,23 +24,12 @@ export default function NavBar() {
   const [scrolled, setScrolled] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
-  const dropdownRef = useRef(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  useEffect(() => {
-    const onClickOutside = e => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setServicesOpen(false)
-      }
-    }
-    document.addEventListener('mousedown', onClickOutside)
-    return () => document.removeEventListener('mousedown', onClickOutside)
   }, [])
 
   return (
@@ -90,9 +79,12 @@ export default function NavBar() {
             </li>
 
             {/* Services dropdown */}
-            <li ref={dropdownRef} className="relative">
+            <li
+              className="relative"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
               <button
-                onClick={() => setServicesOpen(v => !v)}
                 className="px-3 py-2 text-sm font-medium transition-colors hover:text-[--color-accent] flex items-center gap-1"
                 style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.02em', color: 'var(--color-text-primary)', background: 'none', border: 'none', cursor: 'pointer' }}
               >
