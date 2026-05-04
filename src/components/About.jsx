@@ -14,16 +14,15 @@ export default function About() {
   return (
     <section id="about" className="section-pad" style={{ background: 'white' }}>
       <div className="container-x">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-stretch">
 
           {/* Image */}
-          <Reveal className="relative">
-            <div className="relative">
+          <Reveal className="relative h-full">
+            <div className="relative h-full min-h-[400px]">
               <img
                 src="/images/Roll-Up Garage Doors Industrial Roller Shutters.jpg"
                 alt="Modern garage door installation by Hi-Tech Doors Port Elizabeth"
-                className="w-full object-cover"
-                style={{ aspectRatio: '4/3' }}
+                className="w-full h-full object-cover"
               />
               {/* Stat badge — Dormatic floating card style */}
               <div
