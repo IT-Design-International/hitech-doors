@@ -31,8 +31,8 @@ export default function ProductPageLayout({
       <main>
         {/* ── Hero ───────────────────────────────────────────────── */}
         <section
-          className="relative flex items-center justify-center"
-          style={{ minHeight: '55vh', paddingTop: '96px', paddingBottom: '4rem' }}
+          className="relative"
+          style={{ minHeight: '62vh' }}
           aria-label={heroAlt}
         >
           {/* Background image */}
@@ -52,8 +52,12 @@ export default function ProductPageLayout({
             style={{ background: 'linear-gradient(135deg, rgba(28,64,96,0.82) 0%, rgba(26,37,53,0.70) 100%)' }}
           />
 
-          {/* Content */}
-          <div className="container-x relative z-10 text-center text-white">
+          {/* Content — fills section, centers below nav */}
+          <div
+            className="absolute inset-0 z-10 flex items-center justify-center text-center text-white"
+            style={{ paddingTop: '132px', paddingBottom: '3rem' }}
+          >
+          <div className="container-x">
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
@@ -95,6 +99,7 @@ export default function ProductPageLayout({
                 {intro}
               </p>
             </motion.div>
+          </div>
           </div>
         </section>
 
