@@ -46,10 +46,11 @@ export default function NavBar() {
         className="transition-shadow duration-300"
         style={{
           background: 'white',
-          boxShadow: scrolled ? '0 2px 24px rgba(28,64,96,0.12)' : '0 1px 0 rgba(28,64,96,0.08)',
+          borderBottom: '1px solid rgba(28,64,96,0.12)',
+          boxShadow: scrolled ? '0 4px 24px rgba(28,64,96,0.12)' : '0 2px 8px rgba(28,64,96,0.06)',
         }}
       >
-        <div className="container-x flex items-center justify-between h-16 sm:h-18">
+        <div className="container-x flex items-center justify-between h-20 sm:h-24">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 flex-shrink-0" aria-label="Hi-Tech Doors home">
             <img
