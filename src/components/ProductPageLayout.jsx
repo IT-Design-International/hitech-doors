@@ -38,7 +38,7 @@ export default function ProductPageLayout({
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `url(${heroImage})`,
+              backgroundImage: `url("${heroImage}")`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
@@ -112,9 +112,7 @@ export default function ProductPageLayout({
                         borderTop: '3px solid var(--color-accent)',
                       }}
                     >
-                      <div className="icon-circle">
-                        <Icon size={26} strokeWidth={1.5} color="white" />
-                      </div>
+                      <Icon size={30} strokeWidth={1.5} style={{ color: 'var(--color-accent)', flexShrink: 0 }} />
                       <div>
                         <h3
                           className="mb-3"
