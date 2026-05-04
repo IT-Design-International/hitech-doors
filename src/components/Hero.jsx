@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero.jpg"
+          src="/images/garage door installation automations port elizabeth.jpg"
           alt="Modern garage door installation by Hi-Tech Doors Port Elizabeth"
           className="w-full h-full object-cover"
         />
@@ -43,9 +43,9 @@ export default function Hero() {
             className="text-white mb-6"
             style={{ lineHeight: 1.05 }}
           >
-            We Open Doors<br />
-            <span style={{ color: 'var(--color-accent)' }}>to Your Home</span><br />
-            &amp; Business
+            Quality Garage Doors,<br />
+            <span style={{ color: 'var(--color-accent)' }}>Installed Right —</span><br />
+            Every Time Since 1997
           </motion.h1>
 
           {/* Sub-headline */}
@@ -53,7 +53,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-lg mb-8 max-w-lg"
+            className="text-lg mb-8"
             style={{ color: 'rgba(255,255,255,0.80)', lineHeight: 1.7 }}
           >
             From sectional and roll-up garage doors to industrial roller shutters, aluminium window shutters and full gate automation — Port Elizabeth's trusted door specialists since 1997. We supply, install and repair using quality brands like Timbercon, Superdoors and Wispeco, serving residential and commercial clients across the Eastern Cape.
@@ -93,7 +93,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-wrap gap-6 mt-10 pt-8"
+            className="grid grid-cols-4 mt-10 pt-8"
             style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}
           >
             {[
@@ -101,10 +101,14 @@ export default function Hero() {
               { num: '3', label: 'Trusted Door Brands' },
               { num: '5+', label: 'Automation Brands' },
               { num: 'PE', label: '& Surrounds' },
-            ].map(stat => (
-              <div key={stat.label} className="text-center">
-                <div className="text-2xl font-bold" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-accent)' }}>{stat.num}</div>
-                <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.60)', fontFamily: 'Open Sans, sans-serif' }}>{stat.label}</div>
+            ].map((stat, i) => (
+              <div
+                key={stat.label}
+                className="flex flex-col items-center justify-center py-5"
+                style={i < 3 ? { borderRight: '1px solid rgba(255,255,255,0.12)' } : {}}
+              >
+                <div className="text-3xl font-bold" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-accent)' }}>{stat.num}</div>
+                <div className="text-xs mt-1 text-center" style={{ color: 'rgba(255,255,255,0.60)', fontFamily: 'Open Sans, sans-serif' }}>{stat.label}</div>
               </div>
             ))}
           </motion.div>
