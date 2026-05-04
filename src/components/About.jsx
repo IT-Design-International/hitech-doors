@@ -32,7 +32,7 @@ export default function About() {
               >
                 <span className="text-4xl font-bold" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-teal)' }}>28+</span>
                 <span className="text-sm leading-tight" style={{ color: 'var(--color-text-secondary)' }}>
-                  Years of<br />Experience
+                  Years of<br />Excellence
                 </span>
               </div>
             </div>
