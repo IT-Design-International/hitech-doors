@@ -22,7 +22,7 @@ export default function About() {
               <img
                 src="/images/Roll-Up Garage Doors Industrial Roller Shutters.jpg"
                 alt="Modern garage door installation by Hi-Tech Doors Port Elizabeth"
-                className="w-full object-cover object-top"
+                className="w-full object-cover object-center"
                 style={{ height: '560px' }}
               />
               {/* Stat badge — Dormatic floating card style */}
