@@ -30,7 +30,7 @@ export default function About() {
                 className="absolute bottom-6 left-6 px-6 py-4 bg-white flex items-center gap-4"
                 style={{ boxShadow: 'var(--shadow-deep)' }}
               >
-                <span className="text-4xl font-bold" style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-teal)' }}>28+</span>
+                <span className="text-4xl font-bold" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-teal)' }}>28+</span>
                 <span className="text-sm leading-tight" style={{ color: 'var(--color-text-secondary)' }}>
                   Years of<br />Experience
                 </span>
@@ -51,7 +51,7 @@ export default function About() {
               style={{
                 borderLeft: '4px solid var(--color-accent)',
                 color: 'var(--color-teal)',
-                fontFamily: 'Oswald, sans-serif',
+                fontFamily: 'Open Sans, sans-serif',
                 fontWeight: 500,
                 letterSpacing: '0.01em',
               }}

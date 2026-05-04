@@ -42,7 +42,7 @@ export default function QuickContact() {
             <a
               href="#contact"
               className="text-sm font-medium flex items-center gap-1.5 hover:gap-2.5 transition-all"
-              style={{ color: 'var(--color-accent)', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase' }}
+              style={{ color: 'var(--color-accent)', fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase' }}
             >
               Find Our Showroom →
             </a>

@@ -81,7 +81,7 @@ export default function Contact() {
                     <Icon size={18} strokeWidth={1.5} color="white" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-accent)' }}>
+                    <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-accent)' }}>
                       {label}
                     </p>
                     <div style={{ color: 'var(--color-text-secondary)' }}>{content}</div>
@@ -115,21 +115,21 @@ export default function Contact() {
               <h3 className="mb-6">Send Us a Message</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label htmlFor="ct-name" className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-text-muted)' }}>Full Name *</label>
+                  <label htmlFor="ct-name" className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-text-muted)' }}>Full Name *</label>
                   <input id="ct-name" name="name" type="text" required placeholder="Your name" value={form.name} onChange={handleChange} className={inputClass} style={inputStyle} />
                 </div>
                 <div>
-                  <label htmlFor="ct-email" className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-text-muted)' }}>Email *</label>
+                  <label htmlFor="ct-email" className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-text-muted)' }}>Email *</label>
                   <input id="ct-email" name="email" type="email" required placeholder="your@email.com" value={form.email} onChange={handleChange} className={inputClass} style={inputStyle} />
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label htmlFor="ct-phone" className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-text-muted)' }}>Phone</label>
+                  <label htmlFor="ct-phone" className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-text-muted)' }}>Phone</label>
                   <input id="ct-phone" name="phone" type="tel" placeholder="(041) 000-0000" value={form.phone} onChange={handleChange} className={inputClass} style={inputStyle} />
                 </div>
                 <div>
-                  <label htmlFor="ct-service" className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-text-muted)' }}>Service Required</label>
+                  <label htmlFor="ct-service" className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-text-muted)' }}>Service Required</label>
                   <select id="ct-service" name="service" value={form.service} onChange={handleChange} className={`${inputClass} appearance-none`} style={{ ...inputStyle, color: form.service ? 'var(--color-text-primary)' : 'var(--color-text-muted)' }}>
                     <option value="" disabled>Select a service</option>
                     {SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
@@ -137,7 +137,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className="mb-6">
-                <label htmlFor="ct-message" className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-text-muted)' }}>Message</label>
+                <label htmlFor="ct-message" className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-text-muted)' }}>Message</label>
                 <textarea id="ct-message" name="message" rows={5} placeholder="Tell us about your project — door type, opening size, existing automation, etc." value={form.message} onChange={handleChange} className={inputClass} style={{ ...inputStyle, resize: 'vertical' }} />
               </div>
               <button type="submit" className="btn btn-primary btn-large w-full flex items-center justify-center gap-2">

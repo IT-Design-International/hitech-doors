@@ -29,7 +29,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-sm font-medium mb-4 flex items-center gap-2"
-            style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-accent)', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+            style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-accent)', letterSpacing: '0.2em', textTransform: 'uppercase' }}
           >
             <span style={{ display: 'inline-block', width: 28, height: 2, background: 'var(--color-accent)', flexShrink: 0 }} />
             Port Elizabeth &amp; Surrounds — Est. 1997
@@ -79,7 +79,7 @@ export default function Hero() {
               <Phone size={20} strokeWidth={1.5} style={{ color: 'var(--color-teal)' }} />
               <span>
                 <span className="block text-xs opacity-70" style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.05em' }}>Call Us Now</span>
-                <span className="font-bold text-lg" style={{ fontFamily: 'Oswald, sans-serif', letterSpacing: '0.04em' }}>(041) 365-3996</span>
+                <span className="font-bold text-lg" style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.04em' }}>(041) 365-3996</span>
               </span>
             </a>
 
@@ -103,7 +103,7 @@ export default function Hero() {
               { num: 'PE', label: '& Surrounds' },
             ].map(stat => (
               <div key={stat.label} className="text-center">
-                <div className="text-2xl font-bold" style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-accent)' }}>{stat.num}</div>
+                <div className="text-2xl font-bold" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-accent)' }}>{stat.num}</div>
                 <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.60)', fontFamily: 'Open Sans, sans-serif' }}>{stat.label}</div>
               </div>
             ))}

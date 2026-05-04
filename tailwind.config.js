@@ -17,7 +17,7 @@ export default {
         line:        { DEFAULT: '#D1DCE8', subtle: '#E8EEF4' },
       },
       fontFamily: {
-        display: ['"Oswald"', 'Impact', 'sans-serif'],
+        display: ['"Open Sans"', 'sans-serif'],
         body:    ['"Open Sans"', '-apple-system', 'sans-serif'],
       },
       boxShadow: {

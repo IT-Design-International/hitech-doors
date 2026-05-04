@@ -86,7 +86,7 @@ export default function Services() {
                   <a
                     href="#contact"
                     className="text-xs font-semibold uppercase tracking-wider hover:gap-2.5 flex items-center gap-1.5 transition-all"
-                    style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-accent)' }}
+                    style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-accent)' }}
                   >
                     Enquire →
                   </a>

@@ -50,7 +50,7 @@ export default function Testimonials() {
                   &ldquo;{t.text}&rdquo;
                 </p>
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.12)', paddingTop: '1rem' }}>
-                  <p className="font-semibold" style={{ fontFamily: 'Oswald, sans-serif', color: 'white', letterSpacing: '0.04em' }}>
+                  <p className="font-semibold" style={{ fontFamily: 'Open Sans, sans-serif', color: 'white', letterSpacing: '0.04em' }}>
                     {t.name}
                   </p>
                   <p className="text-xs mt-0.5" style={{ color: 'var(--color-teal)' }}>{t.location}</p>

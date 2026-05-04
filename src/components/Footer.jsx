@@ -25,7 +25,7 @@ export default function Footer() {
       {/* CTA band */}
       <div style={{ background: 'var(--color-accent)', padding: '1.75rem 0' }}>
         <div className="container-x flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-bold text-lg text-white" style={{ fontFamily: 'Oswald, sans-serif', letterSpacing: '0.04em' }}>
+          <p className="font-bold text-lg text-white" style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.04em' }}>
             Ready to upgrade your garage door or automation?
           </p>
           <div className="flex gap-3">
@@ -48,7 +48,7 @@ export default function Footer() {
               alt="Hi-Tech Doors Port Elizabeth"
               className="h-20 w-auto object-contain mb-5"
               onError={e => {
-                e.currentTarget.outerHTML = '<div style="font-family:Oswald,sans-serif;font-size:1.6rem;font-weight:700;color:white;margin-bottom:1.25rem">HI-TECH DOORS</div>'
+                e.currentTarget.outerHTML = '<div style="font-family:Open Sans,sans-serif;font-size:1.6rem;font-weight:700;color:white;margin-bottom:1.25rem">HI-TECH DOORS</div>'
               }}
             />
             <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.60)' }}>
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-white mb-5 text-sm" style={{ fontFamily: 'Oswald, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
+            <h4 className="text-white mb-5 text-sm" style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
               Our Services
             </h4>
             <ul className="space-y-2.5">
@@ -80,7 +80,7 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="text-white mb-5 text-sm" style={{ fontFamily: 'Oswald, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
+            <h4 className="text-white mb-5 text-sm" style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
               Quick Links
             </h4>
             <ul className="space-y-2.5">
@@ -101,7 +101,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white mb-5 text-sm" style={{ fontFamily: 'Oswald, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
+            <h4 className="text-white mb-5 text-sm" style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
               Contact Us
             </h4>
             <ul className="space-y-4">

@@ -31,7 +31,7 @@ export default function Brands() {
 
         {/* Door brands */}
         <Reveal delay={0.05}>
-          <p className="text-xs font-semibold uppercase tracking-widest mb-6 text-center" style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-text-muted)' }}>
+          <p className="text-xs font-semibold uppercase tracking-widest mb-6 text-center" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-text-muted)' }}>
             Door Manufacturers
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
@@ -46,7 +46,7 @@ export default function Brands() {
                   alt={`${b.name} — garage door brand stocked by Hi-Tech Doors`}
                   className="h-12 object-contain"
                   onError={e => {
-                    e.currentTarget.parentElement.innerHTML = `<span style="font-family:Oswald,sans-serif;font-size:1.4rem;font-weight:700;color:var(--color-bg-deep)">${b.name}</span><span style="font-size:0.7rem;color:var(--color-text-muted);margin-top:0.25rem">${b.type}</span>`
+                    e.currentTarget.parentElement.innerHTML = `<span style="font-family:Open Sans,sans-serif;font-size:1.4rem;font-weight:700;color:var(--color-bg-deep)">${b.name}</span><span style="font-size:0.7rem;color:var(--color-text-muted);margin-top:0.25rem">${b.type}</span>`
                   }}
                 />
                 <span
@@ -61,7 +61,7 @@ export default function Brands() {
 
         {/* Automation brands */}
         <Reveal delay={0.1}>
-          <p className="text-xs font-semibold uppercase tracking-widest mb-6 text-center" style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-text-muted)' }}>
+          <p className="text-xs font-semibold uppercase tracking-widest mb-6 text-center" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-text-muted)' }}>
             Automation Systems
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -70,7 +70,7 @@ export default function Brands() {
                 key={b}
                 className="px-5 py-2.5 text-sm font-semibold"
                 style={{
-                  fontFamily: 'Oswald, sans-serif',
+                  fontFamily: 'Open Sans, sans-serif',
                   background: 'var(--color-bg-primary)',
                   color: 'var(--color-bg-deep)',
                   border: '1px solid var(--color-border)',
