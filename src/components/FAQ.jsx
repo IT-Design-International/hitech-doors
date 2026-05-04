@@ -61,7 +61,7 @@ export default function FAQ() {
                           className="w-full flex items-start justify-between gap-4 py-5 text-left"
                           aria-expanded={isOpen}
                         >
-                          <span className="font-semibold text-sm pr-4" style={{ fontFamily: 'Oswald, sans-serif', color: 'var(--color-text-primary)', lineHeight: 1.4, letterSpacing: '0.02em', fontSize: '1rem' }}>
+                          <span className="font-semibold text-sm pr-4" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-text-primary)', lineHeight: 1.4, fontSize: '0.95rem' }}>
                             {faq.q}
                           </span>
                           <span

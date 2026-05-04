@@ -42,7 +42,7 @@ export default function WhyUs() {
                   <r.icon size={28} strokeWidth={1.5} color="white" />
                 </div>
                 <div>
-                  <h3 className="mb-3">{r.title}</h3>
+                  <h3 className="mb-3" style={{ fontFamily: 'Questrial, sans-serif', fontWeight: 400 }}>{r.title}</h3>
                   <p className="text-sm leading-relaxed">{r.body}</p>
                 </div>
               </div>

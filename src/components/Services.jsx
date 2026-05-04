@@ -69,7 +69,7 @@ export default function Services() {
                   <s.icon size={26} strokeWidth={1.5} color="white" />
                 </div>
                 <div>
-                  <h3 className="mb-2" dangerouslySetInnerHTML={{ __html: s.title }} />
+                  <h3 className="mb-2" style={{ fontFamily: 'Questrial, sans-serif', fontWeight: 400 }} dangerouslySetInnerHTML={{ __html: s.title }} />
                   <p className="text-sm leading-relaxed mb-4">{s.desc}</p>
                   <ul className="space-y-1.5">
                     {s.items.map(item => (

@@ -68,7 +68,7 @@ export default function NavBar() {
                 <a
                   href={link.href}
                   className="px-3 py-2 text-sm font-medium transition-colors hover:text-[--color-accent]"
-                  style={{ fontFamily: 'Oswald, sans-serif', letterSpacing: '0.06em', color: 'var(--color-text-primary)' }}
+                  style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.02em', color: 'var(--color-text-primary)' }}
                 >
                   {link.label}
                 </a>
@@ -108,8 +108,8 @@ export default function NavBar() {
                     onClick={() => setOpen(false)}
                     className="block py-3 border-b text-sm font-medium hover:text-[--color-accent] transition-colors"
                     style={{
-                      fontFamily: 'Oswald, sans-serif',
-                      letterSpacing: '0.06em',
+                      fontFamily: 'Open Sans, sans-serif',
+                      letterSpacing: '0.02em',
                       color: 'var(--color-text-primary)',
                       borderColor: 'var(--color-border-subtle)',
                     }}
