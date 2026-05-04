@@ -1,4 +1,4 @@
-import { Blinds, RotateCcw, Building2, LayoutGrid, Cpu, Wrench } from 'lucide-react'
+import { Grid2x2, RotateCcw, Building2, LayoutGrid, Cpu, Wrench } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Reveal from './Reveal'
 
@@ -28,7 +28,7 @@ const SERVICES = [
     cta: 'Learn More →',
   },
   {
-    icon: Blinds,
+    icon: Grid2x2,
     title: 'Aluminium Window Shutters',
     desc: 'Lightweight, rust-resistant aluminium shutters for windows and openings. Built to withstand wind, rain and hail — a long-term investment that combines security with aesthetic appeal.',
     items: ["Won't rust or corrode", 'Resistant to wind & hail', 'Lightweight yet sturdy', 'Various colour options'],
