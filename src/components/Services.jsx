@@ -1,4 +1,5 @@
 import { DoorOpen, RotateCcw, Building2, LayoutGrid, Cpu, Wrench } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import Reveal from './Reveal'
 
 const SERVICES = [
@@ -7,38 +8,55 @@ const SERVICES = [
     title: 'Sectional Doors',
     desc: 'Premium sectional garage doors in aluminium, timber, steel panel and glass fibre. Available in the Alu-Lux zinc range, raised-and-field panels, slatted timber and more — in a wide range of colours and finishes.',
     items: ['Alu-Lux Zinc Aluminium', 'Timber Range (10, 20, 30 panel, Tuscan)', 'Steel Panel', 'Glass Fibre'],
+    path: '/sectional-doors',
+    cta: 'Learn More →',
   },
   {
     icon: RotateCcw,
     title: 'Roll-Up Garage Doors',
     desc: 'Compact, space-saving roll-up doors for homes and light commercial properties. Available in standard and non-standard (custom) sizes. Stocked from trusted manufacturers Laziman and Wespeco.',
     items: ['Standard &amp; custom sizes', 'Range of colours', 'Laziman Deluxe', 'Wespeco doors'],
+    path: '/roll-up-garage-doors',
+    cta: 'Learn More →',
   },
   {
     icon: Building2,
     title: 'Industrial Roller Shutters',
     desc: 'Heavy-duty roller shutters for warehouses, factories, retail stores and industrial premises. Engineered for security and durability in demanding commercial environments.',
     items: ['Warehouses &amp; factories', 'Retail security shutters', 'Heavy-gauge steel', 'Manual &amp; automated options'],
+    path: '/industrial-roller-shutters',
+    cta: 'Learn More →',
   },
   {
     icon: DoorOpen,
     title: 'Aluminium Window Shutters',
     desc: 'Lightweight, rust-resistant aluminium shutters for windows and openings. Built to withstand wind, rain and hail — a long-term investment that combines security with aesthetic appeal.',
     items: ['Won\'t rust or corrode', 'Resistant to wind &amp; hail', 'Lightweight yet sturdy', 'Various colour options'],
+    path: '/aluminium-window-shutters',
+    cta: 'Learn More →',
   },
   {
     icon: Cpu,
     title: 'Door &amp; Gate Automation',
     desc: 'We automate garage and roller shutter doors using leading automation brands. All solutions work with both roll-up and sectional doors, giving you convenient, reliable motorised operation.',
     items: ['Hydro Doors', 'DigidoorIII Range', 'Gemini &amp; Superdrive', 'ET Systems &amp; Slimdrive'],
+    path: '/automation',
+    cta: 'Learn More →',
   },
   {
     icon: Wrench,
     title: 'Service &amp; Repairs',
     desc: 'Our after-sales commitment is a core part of what we offer. We service and repair all products we supply — and respond promptly when something needs attention, because your security shouldn\'t wait.',
     items: ['All products serviced', 'Prompt response', 'Experienced technicians', 'PE &amp; surrounds'],
+    path: null,
+    cta: 'Enquire →',
   },
 ]
+
+const linkStyle = {
+  fontFamily: 'Open Sans, sans-serif',
+  color: 'var(--color-accent)',
+}
 
 export default function Services() {
   return (
@@ -83,13 +101,23 @@ export default function Services() {
                   </ul>
                 </div>
                 <div className="mt-auto pt-4" style={{ borderTop: '1px solid var(--color-border-subtle)' }}>
-                  <a
-                    href="#contact"
-                    className="text-xs font-semibold uppercase tracking-wider hover:gap-2.5 flex items-center gap-1.5 transition-all"
-                    style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-accent)' }}
-                  >
-                    Enquire →
-                  </a>
+                  {s.path ? (
+                    <Link
+                      to={s.path}
+                      className="text-xs font-semibold uppercase tracking-wider hover:gap-2.5 flex items-center gap-1.5 transition-all"
+                      style={linkStyle}
+                    >
+                      {s.cta}
+                    </Link>
+                  ) : (
+                    <a
+                      href="#contact"
+                      className="text-xs font-semibold uppercase tracking-wider hover:gap-2.5 flex items-center gap-1.5 transition-all"
+                      style={linkStyle}
+                    >
+                      {s.cta}
+                    </a>
+                  )}
                 </div>
               </div>
             </Reveal>
