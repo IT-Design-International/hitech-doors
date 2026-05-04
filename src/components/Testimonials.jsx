@@ -33,7 +33,7 @@ export default function Testimonials() {
       <div className="container-x relative z-10">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="eyebrow justify-center" style={{ color: 'var(--color-accent)' }}>What Our Clients Say</p>
+            <p className="eyebrow eyebrow-teal justify-center">What Our Clients Say</p>
             <h2 style={{ color: 'white' }}>Trusted by Port Elizabeth Homeowners &amp; Businesses</h2>
           </div>
         </Reveal>

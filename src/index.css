@@ -91,6 +91,9 @@
     flex-shrink: 0;
   }
 
+  .eyebrow-teal { color: var(--color-teal); }
+  .eyebrow-teal::before { background: var(--color-teal); }
+
   .btn {
     display: inline-flex;
     align-items: center;
