@@ -55,7 +55,7 @@ export default function NavBar() {
             <img
               src="/images/logo.png"
               alt="Hi-Tech Doors logo"
-              className="h-14 sm:h-16 w-auto object-contain"
+              className="h-12 w-auto object-contain"
               onError={e => { e.currentTarget.style.display = 'none' }}
             />
             <span className="sr-only">Hi-Tech Doors</span>

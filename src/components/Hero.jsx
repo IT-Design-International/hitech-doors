@@ -21,7 +21,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="container-x relative z-10 py-20 md:py-28">
+      <div className="container-x w-full relative z-10 py-20 md:py-28">
         <div className="max-w-2xl">
           {/* Eyebrow */}
           <motion.p
@@ -56,7 +56,7 @@ export default function Hero() {
             className="text-lg mb-8 max-w-lg"
             style={{ color: 'rgba(255,255,255,0.80)', lineHeight: 1.7 }}
           >
-            Over 28 years supplying and installing quality garage doors, industrial roller shutters, and full automation — every installation completed to perfection.
+            From sectional and roll-up garage doors to industrial roller shutters, aluminium window shutters and full gate automation — Port Elizabeth's trusted door specialists since 1997. We supply, install and repair using quality brands like Timbercon, Superdoors and Wispeco, serving residential and commercial clients across the Eastern Cape.
           </motion.p>
 
           {/* CTAs */}
