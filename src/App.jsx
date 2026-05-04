@@ -9,7 +9,15 @@ import AutomationPage from './pages/AutomationPage'
 
 function ScrollRestoration() {
   const { pathname, hash } = useLocation()
-  useEffect(() => { if (!hash) window.scrollTo(0, 0) }, [pathname, hash])
+  useEffect(() => {
+    if (hash) {
+      // React SPA: DOM exists after render, so we can scroll to the element
+      const el = document.querySelector(hash)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [pathname, hash])
   return null
 }
 

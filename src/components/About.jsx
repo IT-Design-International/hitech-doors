@@ -77,7 +77,7 @@ export default function About() {
             </ul>
 
             <div className="flex flex-wrap gap-3">
-              <a href="#contact" className="btn btn-primary">Get a Free Quote</a>
+              <a href="/#contact" className="btn btn-primary">Get a Free Quote</a>
               <a href="tel:+27413653996" className="btn btn-navy">(041) 365-3996</a>
             </div>
           </Reveal>
