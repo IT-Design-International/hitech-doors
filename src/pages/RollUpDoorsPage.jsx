@@ -1,6 +1,10 @@
 import { RotateCcw, Ruler, Palette } from 'lucide-react'
 import ProductPageLayout from '../components/ProductPageLayout'
 
+const GALLERY = [
+  { src: '/images/rollup-door.jpg', alt: 'Roll-up garage door installation Port Elizabeth' },
+]
+
 const FEATURES = [
   {
     icon: RotateCcw,
@@ -34,7 +38,8 @@ export default function RollUpDoorsPage() {
       title="Roll-Up Garage Doors"
       eyebrow="Roll-Up Doors"
       intro="Compact, space-saving roll-up garage doors for homes and light commercial properties — available in standard and custom sizes from trusted manufacturers."
-      heroImage="/images/Roll-Up Garage Doors Industrial Roller Shutters.jpg"
+      heroImage="/images/rollup-door.jpg"
+      gallery={GALLERY}
       heroAlt="Roll-up garage door installation Port Elizabeth"
       features={FEATURES}
       highlights={HIGHLIGHTS}

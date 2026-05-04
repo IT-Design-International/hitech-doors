@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react'
-import { Menu, X, Phone, MapPin } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import { Menu, X, Phone, MapPin, ChevronDown } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
   { label: 'Brands', href: '#brands' },
   { label: 'Testimonials', href: '#testimonials' },
@@ -11,15 +10,37 @@ const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ]
 
+const SERVICE_LINKS = [
+  { label: 'Sectional Doors', to: '/sectional-doors' },
+  { label: 'Roll-Up Garage Doors', to: '/roll-up-garage-doors' },
+  { label: 'Industrial Roller Shutters', to: '/industrial-roller-shutters' },
+  { label: 'Aluminium Window Shutters', to: '/aluminium-window-shutters' },
+  { label: 'Automation', to: '/automation' },
+  { label: 'Service & Repairs', to: '/#contact' },
+]
+
 export default function NavBar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const dropdownRef = useRef(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const onClickOutside = e => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setServicesOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', onClickOutside)
+    return () => document.removeEventListener('mousedown', onClickOutside)
   }, [])
 
   return (
@@ -64,6 +85,48 @@ export default function NavBar() {
 
           {/* Desktop links */}
           <ul className="hidden lg:flex items-center gap-1">
+            <li key="home">
+              <a href="#home" className="px-3 py-2 text-sm font-medium transition-colors hover:text-[--color-accent]" style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.02em', color: 'var(--color-text-primary)' }}>Home</a>
+            </li>
+
+            {/* Services dropdown */}
+            <li ref={dropdownRef} className="relative">
+              <button
+                onClick={() => setServicesOpen(v => !v)}
+                className="px-3 py-2 text-sm font-medium transition-colors hover:text-[--color-accent] flex items-center gap-1"
+                style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.02em', color: 'var(--color-text-primary)', background: 'none', border: 'none', cursor: 'pointer' }}
+              >
+                Services
+                <ChevronDown size={14} strokeWidth={1.5} style={{ transition: 'transform 0.2s', transform: servicesOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} />
+              </button>
+              {servicesOpen && (
+                <div
+                  className="absolute top-full left-0 mt-1 py-2 w-56 bg-white z-50"
+                  style={{ boxShadow: '0 8px 32px rgba(28,64,96,0.14)', border: '1px solid rgba(28,64,96,0.08)' }}
+                >
+                  <a
+                    href="#services"
+                    onClick={() => setServicesOpen(false)}
+                    className="block px-4 py-2 text-xs font-semibold uppercase tracking-wider"
+                    style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-accent)', borderBottom: '1px solid var(--color-border-subtle)' }}
+                  >
+                    All Services
+                  </a>
+                  {SERVICE_LINKS.map(s => (
+                    <Link
+                      key={s.to}
+                      to={s.to}
+                      onClick={() => setServicesOpen(false)}
+                      className="block px-4 py-2.5 text-sm transition-colors hover:bg-gray-50 hover:text-[--color-accent]"
+                      style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-text-secondary)' }}
+                    >
+                      {s.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </li>
+
             {NAV_LINKS.map(link => (
               <li key={link.href}>
                 <a
@@ -102,6 +165,36 @@ export default function NavBar() {
         {open && (
           <div className="lg:hidden border-t" style={{ borderColor: 'var(--color-border)', background: 'white' }}>
             <ul className="container-x flex flex-col py-3">
+              <li>
+                <a href="#home" onClick={() => setOpen(false)} className="block py-3 border-b text-sm font-medium hover:text-[--color-accent] transition-colors" style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.02em', color: 'var(--color-text-primary)', borderColor: 'var(--color-border-subtle)' }}>
+                  Home
+                </a>
+              </li>
+              {/* Mobile Services expandable */}
+              <li>
+                <button
+                  onClick={() => setMobileServicesOpen(v => !v)}
+                  className="w-full flex items-center justify-between py-3 border-b text-sm font-medium hover:text-[--color-accent] transition-colors"
+                  style={{ fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.02em', color: 'var(--color-text-primary)', borderColor: 'var(--color-border-subtle)', background: 'none', border: 'none', borderBottom: '1px solid var(--color-border-subtle)', cursor: 'pointer' }}
+                >
+                  Services
+                  <ChevronDown size={14} strokeWidth={1.5} style={{ transition: 'transform 0.2s', transform: mobileServicesOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} />
+                </button>
+                {mobileServicesOpen && (
+                  <ul className="pl-4 pb-1" style={{ borderBottom: '1px solid var(--color-border-subtle)' }}>
+                    <li>
+                      <a href="#services" onClick={() => { setOpen(false); setMobileServicesOpen(false) }} className="block py-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-accent)' }}>All Services</a>
+                    </li>
+                    {SERVICE_LINKS.map(s => (
+                      <li key={s.to}>
+                        <Link to={s.to} onClick={() => { setOpen(false); setMobileServicesOpen(false) }} className="block py-2 text-sm hover:text-[--color-accent] transition-colors" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-text-secondary)' }}>
+                          {s.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
               {NAV_LINKS.map(link => (
                 <li key={link.href}>
                   <a

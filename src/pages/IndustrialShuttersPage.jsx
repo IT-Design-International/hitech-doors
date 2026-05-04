@@ -1,6 +1,12 @@
 import { Building2, ShieldCheck, Cpu } from 'lucide-react'
 import ProductPageLayout from '../components/ProductPageLayout'
 
+const GALLERY = [
+  { src: '/images/industrial-shutter-1.jpg', alt: 'Industrial roller shutter installation' },
+  { src: '/images/industrial-shutter-2.jpg', alt: 'Commercial roller shutter Port Elizabeth' },
+  { src: '/images/industrial-shutter-3.jpg', alt: 'Industrial roller shutter closed' },
+]
+
 const FEATURES = [
   {
     icon: Building2,
@@ -34,7 +40,8 @@ export default function IndustrialShuttersPage() {
       title="Industrial Roller Shutters"
       eyebrow="Industrial Shutters"
       intro="Heavy-duty roller shutters engineered for warehouses, factories, retail stores and industrial premises — built for security, durability and demanding commercial environments."
-      heroImage="/images/service-2.jpg"
+      heroImage="/images/industrial-shutter-1.jpg"
+      gallery={GALLERY}
       heroAlt="Industrial roller shutter installation Port Elizabeth"
       features={FEATURES}
       highlights={HIGHLIGHTS}

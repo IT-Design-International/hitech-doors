@@ -14,6 +14,7 @@ export default function ProductPageLayout({
   heroAlt,
   features = [],
   highlights = [],
+  gallery = [],
   ctaNote,
   metaTitle,
   metaDescription,
@@ -129,6 +130,32 @@ export default function ProductPageLayout({
             </div>
           </div>
         </section>
+
+        {/* ── Gallery ────────────────────────────────────────────── */}
+        {gallery.length > 0 && (
+          <section className="section-pad" style={{ background: 'var(--color-bg-primary)' }}>
+            <div className="container-x">
+              <Reveal>
+                <p className="eyebrow justify-center">Our Work</p>
+                <h2 className="text-center mb-10">Product Gallery</h2>
+              </Reveal>
+              <div className={`grid gap-4 ${gallery.length === 1 ? 'grid-cols-1 max-w-2xl mx-auto' : gallery.length <= 3 ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'}`}>
+                {gallery.map((img, i) => (
+                  <Reveal key={img.src} delay={i * 0.07}>
+                    <div className="overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ── Highlights + CTA ───────────────────────────────────── */}
         <section className="section-pad" style={{ background: 'var(--color-bg-primary)' }}>

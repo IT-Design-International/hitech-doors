@@ -1,6 +1,17 @@
 import { LayoutGrid, TreePine, Layers } from 'lucide-react'
 import ProductPageLayout from '../components/ProductPageLayout'
 
+const GALLERY = [
+  { src: '/images/sectional-alu-lux-zinc.jpg', alt: 'Aluminium Alu-Lux zinc sectional door' },
+  { src: '/images/sectional-door-colours.jpg', alt: 'Aluminium door colour range' },
+  { src: '/images/sectional-door-20-panel.jpg', alt: 'Aluminium 20-panel sectional door' },
+  { src: '/images/sectional-door-10-panel.jpg', alt: 'Aluminium 10-panel sectional door' },
+  { src: '/images/sectional-door-raised-field.jpg', alt: 'Alu-Lux zinc raised-and-field door' },
+  { src: '/images/sectional-timber-brick.jpg', alt: 'Timber brick-style sectional door' },
+  { src: '/images/sectional-timber-tuscan.jpg', alt: 'Tuscan timber sectional door' },
+  { src: '/images/sectional-door-slatted.jpg', alt: 'Slatted sectional door' },
+]
+
 const FEATURES = [
   {
     icon: LayoutGrid,
@@ -34,7 +45,8 @@ export default function SectionalDoorsPage() {
       title="Sectional Garage Doors"
       eyebrow="Sectional Doors"
       intro="Premium sectional garage doors for homes and businesses across Port Elizabeth — available in aluminium, timber, steel panel and glass fibre, in a wide range of colours and finishes."
-      heroImage="/images/hero-2.jpg"
+      heroImage="/images/sectional-alu-lux-zinc.jpg"
+      gallery={GALLERY}
       heroAlt="Sectional garage door installation Port Elizabeth"
       features={FEATURES}
       highlights={HIGHLIGHTS}

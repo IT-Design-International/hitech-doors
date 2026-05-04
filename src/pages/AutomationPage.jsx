@@ -1,6 +1,11 @@
 import { Cpu, DoorOpen, Wrench } from 'lucide-react'
 import ProductPageLayout from '../components/ProductPageLayout'
 
+const GALLERY = [
+  { src: '/images/automation-motor.jpg', alt: 'Garage door automation motor installation' },
+  { src: '/images/automation-remote.jpg', alt: 'Automation remote control unit' },
+]
+
 const FEATURES = [
   {
     icon: Cpu,
@@ -34,7 +39,8 @@ export default function AutomationPage() {
       title="Door & Gate Automation"
       eyebrow="Automation"
       intro="Full garage and gate automation solutions for both residential and commercial properties — compatible with roll-up and sectional doors, using leading automation brands."
-      heroImage="/images/automation.jpg"
+      heroImage="/images/automation-motor.jpg"
+      gallery={GALLERY}
       heroAlt="Automated garage door and gate Port Elizabeth"
       features={FEATURES}
       highlights={HIGHLIGHTS}

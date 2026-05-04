@@ -1,6 +1,15 @@
 import { Shield, Wind, Star } from 'lucide-react'
 import ProductPageLayout from '../components/ProductPageLayout'
 
+const GALLERY = [
+  { src: '/images/alum-shutter-1.jpg', alt: 'Aluminium window shutters Port Elizabeth' },
+  { src: '/images/alum-shutter-2.jpg', alt: 'Aluminium shutters installed on home' },
+  { src: '/images/alum-shutter-3.jpg', alt: 'Aluminium shutters close-up' },
+  { src: '/images/alum-shutter-4.jpg', alt: 'Aluminium window shutters exterior' },
+  { src: '/images/alum-shutter-5.jpg', alt: 'Aluminium shutters open position' },
+  { src: '/images/alum-shutter-6.jpg', alt: 'Aluminium shutters on large windows' },
+]
+
 const FEATURES = [
   {
     icon: Shield,
@@ -34,7 +43,8 @@ export default function AluminiumShuttersPage() {
       title="Aluminium Window Shutters"
       eyebrow="Aluminium Shutters"
       intro="Lightweight, rust-resistant aluminium shutters for windows and openings — built to withstand wind, rain and hail, combining lasting security with aesthetic appeal."
-      heroImage="/images/aluminium-shutters.jpg"
+      heroImage="/images/alum-shutter-1.jpg"
+      gallery={GALLERY}
       heroAlt="Aluminium window shutters Port Elizabeth"
       features={FEATURES}
       highlights={HIGHLIGHTS}

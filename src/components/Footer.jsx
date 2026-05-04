@@ -1,12 +1,13 @@
 import { Phone, Mail, MapPin } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const SERVICES = [
-  { label: 'Sectional Doors', href: '#services' },
-  { label: 'Roll-Up Garage Doors', href: '#services' },
-  { label: 'Industrial Roller Shutters', href: '#services' },
-  { label: 'Aluminium Window Shutters', href: '#services' },
-  { label: 'Automation', href: '#services' },
-  { label: 'Service & Repairs', href: '#services' },
+  { label: 'Sectional Doors', to: '/sectional-doors' },
+  { label: 'Roll-Up Garage Doors', to: '/roll-up-garage-doors' },
+  { label: 'Industrial Roller Shutters', to: '/industrial-roller-shutters' },
+  { label: 'Aluminium Window Shutters', to: '/aluminium-window-shutters' },
+  { label: 'Automation', to: '/automation' },
+  { label: 'Service & Repairs', to: '/#contact' },
 ]
 
 const NAV = [
@@ -43,14 +44,7 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <img
-              src="/images/logo.png"
-              alt="Hi-Tech Doors Port Elizabeth"
-              className="h-20 w-auto object-contain mb-5"
-              onError={e => {
-                e.currentTarget.outerHTML = '<div style="font-family:Open Sans,sans-serif;font-size:1.6rem;font-weight:700;color:white;margin-bottom:1.25rem">HI-TECH DOORS</div>'
-              }}
-            />
+            <p className="text-base font-semibold text-white mb-4" style={{ fontFamily: 'Questrial, sans-serif', fontSize: '1.25rem' }}>Hi-Tech Doors</p>
             <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.60)' }}>
               Port Elizabeth&apos;s trusted garage door and automation specialists — supplying, installing and servicing quality doors since 1997.
             </p>
@@ -65,14 +59,14 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {SERVICES.map(s => (
                 <li key={s.label}>
-                  <a
-                    href={s.href}
+                  <Link
+                    to={s.to}
                     className="text-sm transition-colors hover:text-white flex items-center gap-2"
                     style={{ color: 'rgba(255,255,255,0.60)' }}
                   >
                     <span style={{ color: 'var(--color-accent)', fontSize: '1rem', lineHeight: 1 }}>›</span>
                     {s.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
