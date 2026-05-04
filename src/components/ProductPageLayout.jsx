@@ -1,6 +1,7 @@
+import { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
-import { CheckCircle, Phone } from 'lucide-react'
+import { CheckCircle, Phone, ChevronLeft, ChevronRight, X } from 'lucide-react'
 import NavBar from './NavBar'
 import Footer from './Footer'
 import ScrollToTop from './ScrollToTop'
@@ -19,6 +20,24 @@ export default function ProductPageLayout({
   metaTitle,
   metaDescription,
 }) {
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxIdx, setLightboxIdx] = useState(0)
+
+  useEffect(() => {
+    if (!lightboxOpen) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') setLightboxOpen(false)
+      if (e.key === 'ArrowLeft') setLightboxIdx(i => (i - 1 + gallery.length) % gallery.length)
+      if (e.key === 'ArrowRight') setLightboxIdx(i => (i + 1) % gallery.length)
+    }
+    window.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [lightboxOpen, gallery.length])
+
   return (
     <>
       <Helmet>
@@ -147,12 +166,16 @@ export default function ProductPageLayout({
               <div className={`grid gap-4 ${gallery.length === 1 ? 'grid-cols-1 max-w-2xl mx-auto' : gallery.length <= 3 ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'}`}>
                 {gallery.map((img, i) => (
                   <Reveal key={img.src} delay={i * 0.07}>
-                    <div className="overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                    <div
+                      className="overflow-hidden cursor-zoom-in group"
+                      style={{ aspectRatio: '4/3' }}
+                      onClick={() => { setLightboxIdx(i); setLightboxOpen(true) }}
+                    >
                       <img
                         src={img.src}
                         alt={img.alt}
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
                   </Reveal>
@@ -235,6 +258,69 @@ export default function ProductPageLayout({
 
       <Footer />
       <ScrollToTop />
+
+      {/* ── Lightbox ───────────────────────────────────────────── */}
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center"
+          style={{ background: 'rgba(0,0,0,0.92)' }}
+          onClick={() => setLightboxOpen(false)}
+        >
+          {/* Close */}
+          <button
+            className="absolute top-4 right-4 text-white p-2 hover:opacity-70 transition-opacity"
+            onClick={() => setLightboxOpen(false)}
+            aria-label="Close lightbox"
+          >
+            <X size={30} strokeWidth={1.5} />
+          </button>
+
+          {/* Prev */}
+          {gallery.length > 1 && (
+            <button
+              className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 text-white p-3 hover:opacity-70 transition-opacity"
+              onClick={(e) => { e.stopPropagation(); setLightboxIdx(i => (i - 1 + gallery.length) % gallery.length) }}
+              aria-label="Previous image"
+            >
+              <ChevronLeft size={40} strokeWidth={1.5} />
+            </button>
+          )}
+
+          {/* Image */}
+          <div
+            className="max-w-[85vw] max-h-[85vh] flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={gallery[lightboxIdx].src}
+              alt={gallery[lightboxIdx].alt}
+              className="max-w-full max-h-[85vh] object-contain"
+              style={{ boxShadow: '0 8px 40px rgba(0,0,0,0.6)' }}
+            />
+          </div>
+
+          {/* Next */}
+          {gallery.length > 1 && (
+            <button
+              className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 text-white p-3 hover:opacity-70 transition-opacity"
+              onClick={(e) => { e.stopPropagation(); setLightboxIdx(i => (i + 1) % gallery.length) }}
+              aria-label="Next image"
+            >
+              <ChevronRight size={40} strokeWidth={1.5} />
+            </button>
+          )}
+
+          {/* Counter */}
+          {gallery.length > 1 && (
+            <div
+              className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm px-3 py-1"
+              style={{ color: 'rgba(255,255,255,0.55)' }}
+            >
+              {lightboxIdx + 1} / {gallery.length}
+            </div>
+          )}
+        </div>
+      )}
     </>
   )
 }

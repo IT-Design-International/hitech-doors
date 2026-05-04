@@ -15,7 +15,7 @@ const SERVICES = [
     icon: RotateCcw,
     title: 'Roll-Up Garage Doors',
     desc: 'Compact, space-saving roll-up doors for homes and light commercial properties. Available in standard and non-standard (custom) sizes. Stocked from trusted manufacturers Laziman and Wespeco.',
-    items: ['Standard &amp; custom sizes', 'Range of colours', 'Laziman Deluxe', 'Wespeco doors'],
+    items: ['Standard & custom sizes', 'Range of colours', 'Laziman Deluxe', 'Wespeco doors'],
     path: '/roll-up-garage-doors',
     cta: 'Learn More →',
   },
@@ -23,7 +23,7 @@ const SERVICES = [
     icon: Building2,
     title: 'Industrial Roller Shutters',
     desc: 'Heavy-duty roller shutters for warehouses, factories, retail stores and industrial premises. Engineered for security and durability in demanding commercial environments.',
-    items: ['Warehouses &amp; factories', 'Retail security shutters', 'Heavy-gauge steel', 'Manual &amp; automated options'],
+    items: ['Warehouses & factories', 'Retail security shutters', 'Heavy-gauge steel', 'Manual & automated options'],
     path: '/industrial-roller-shutters',
     cta: 'Learn More →',
   },
@@ -31,23 +31,23 @@ const SERVICES = [
     icon: DoorOpen,
     title: 'Aluminium Window Shutters',
     desc: 'Lightweight, rust-resistant aluminium shutters for windows and openings. Built to withstand wind, rain and hail — a long-term investment that combines security with aesthetic appeal.',
-    items: ['Won\'t rust or corrode', 'Resistant to wind &amp; hail', 'Lightweight yet sturdy', 'Various colour options'],
+    items: ["Won't rust or corrode", 'Resistant to wind & hail', 'Lightweight yet sturdy', 'Various colour options'],
     path: '/aluminium-window-shutters',
     cta: 'Learn More →',
   },
   {
     icon: Cpu,
-    title: 'Door &amp; Gate Automation',
+    title: 'Door & Gate Automation',
     desc: 'We automate garage and roller shutter doors using leading automation brands. All solutions work with both roll-up and sectional doors, giving you convenient, reliable motorised operation.',
-    items: ['Hydro Doors', 'DigidoorIII Range', 'Gemini &amp; Superdrive', 'ET Systems &amp; Slimdrive'],
+    items: ['Hydro Doors', 'DigidoorIII Range', 'Gemini & Superdrive', 'ET Systems & Slimdrive'],
     path: '/automation',
     cta: 'Learn More →',
   },
   {
     icon: Wrench,
-    title: 'Service &amp; Repairs',
-    desc: 'Our after-sales commitment is a core part of what we offer. We service and repair all products we supply — and respond promptly when something needs attention, because your security shouldn\'t wait.',
-    items: ['All products serviced', 'Prompt response', 'Experienced technicians', 'PE &amp; surrounds'],
+    title: 'Service & Repairs',
+    desc: "Our after-sales commitment is a core part of what we offer. We service and repair all products we supply — and respond promptly when something needs attention, because your security shouldn't wait.",
+    items: ['All products serviced', 'Prompt response', 'Experienced technicians', 'PE & surrounds'],
     path: null,
     cta: 'Enquire →',
   },
@@ -83,11 +83,11 @@ export default function Services() {
                 className="bg-white p-7 h-full flex flex-col gap-4 group cursor-default transition-shadow duration-300 hover:shadow-[--shadow-card-hover]"
                 style={{ boxShadow: 'var(--shadow-card)' }}
               >
-                <div className="icon-circle">
-                  <s.icon size={26} strokeWidth={1.5} color="white" />
-                </div>
+                <s.icon size={28} strokeWidth={1.5} style={{ color: 'var(--color-accent)', flexShrink: 0 }} />
                 <div>
-                  <h3 className="mb-2" style={{ fontFamily: 'Questrial, sans-serif', fontWeight: 400 }} dangerouslySetInnerHTML={{ __html: s.title }} />
+                  <h3 className="mb-2" style={{ fontFamily: 'Questrial, sans-serif', fontWeight: 400 }}>
+                    {s.title}
+                  </h3>
                   <p className="text-sm leading-relaxed mb-4">{s.desc}</p>
                   <ul className="space-y-1.5">
                     {s.items.map(item => (
@@ -95,8 +95,10 @@ export default function Services() {
                         key={item}
                         className="text-xs flex items-center gap-2"
                         style={{ color: 'var(--color-text-muted)' }}
-                        dangerouslySetInnerHTML={{ __html: `<span style="color:var(--color-accent);font-size:1rem;line-height:1">›</span> ${item}` }}
-                      />
+                      >
+                        <span style={{ color: 'var(--color-accent)', fontSize: '1rem', lineHeight: 1, flexShrink: 0 }}>›</span>
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -111,7 +113,7 @@ export default function Services() {
                     </Link>
                   ) : (
                     <a
-                      href="#contact"
+                      href="/#contact"
                       className="text-xs font-semibold uppercase tracking-wider hover:gap-2.5 flex items-center gap-1.5 transition-all"
                       style={linkStyle}
                     >

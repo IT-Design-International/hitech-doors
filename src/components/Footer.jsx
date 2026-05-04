@@ -7,17 +7,17 @@ const SERVICES = [
   { label: 'Industrial Roller Shutters', to: '/industrial-roller-shutters' },
   { label: 'Aluminium Window Shutters', to: '/aluminium-window-shutters' },
   { label: 'Automation', to: '/automation' },
-  { label: 'Service & Repairs', to: '/#contact' },
+  { label: 'Service & Repairs', href: '/#contact' },
 ]
 
 const NAV = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'About', href: '#about' },
-  { label: 'Brands', href: '#brands' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/#services' },
+  { label: 'About', href: '/#about' },
+  { label: 'Brands', href: '/#brands' },
+  { label: 'Testimonials', href: '/#testimonials' },
+  { label: 'FAQ', href: '/#faq' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export default function Footer() {
@@ -33,7 +33,7 @@ export default function Footer() {
             <a href="tel:+27413653996" className="btn btn-outline text-white" style={{ borderColor: 'white' }}>
               Call Now
             </a>
-            <a href="#contact" className="btn btn-navy">Get a Quote</a>
+            <a href="/#contact" className="btn btn-navy">Get a Quote</a>
           </div>
         </div>
       </div>
@@ -59,14 +59,25 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {SERVICES.map(s => (
                 <li key={s.label}>
-                  <Link
-                    to={s.to}
-                    className="text-sm transition-colors hover:text-white flex items-center gap-2"
-                    style={{ color: 'rgba(255,255,255,0.60)' }}
-                  >
-                    <span style={{ color: 'var(--color-accent)', fontSize: '1rem', lineHeight: 1 }}>›</span>
-                    {s.label}
-                  </Link>
+                  {s.href ? (
+                    <a
+                      href={s.href}
+                      className="text-sm transition-colors hover:text-white flex items-center gap-2"
+                      style={{ color: 'rgba(255,255,255,0.60)' }}
+                    >
+                      <span style={{ color: 'var(--color-accent)', fontSize: '1rem', lineHeight: 1 }}>›</span>
+                      {s.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={s.to}
+                      className="text-sm transition-colors hover:text-white flex items-center gap-2"
+                      style={{ color: 'rgba(255,255,255,0.60)' }}
+                    >
+                      <span style={{ color: 'var(--color-accent)', fontSize: '1rem', lineHeight: 1 }}>›</span>
+                      {s.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
