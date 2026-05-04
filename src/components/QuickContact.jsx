@@ -34,18 +34,9 @@ export default function QuickContact() {
 
       <div className="container-x relative z-10">
         <Reveal>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
-            <div>
-              <p className="eyebrow">Quick Enquiry</p>
-              <h2>Schedule a Service Request</h2>
-            </div>
-            <a
-              href="#contact"
-              className="text-sm font-medium flex items-center gap-1.5 hover:gap-2.5 transition-all"
-              style={{ color: 'var(--color-accent)', fontFamily: 'Open Sans, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase' }}
-            >
-              Find Our Showroom →
-            </a>
+          <div className="mb-8">
+            <p className="eyebrow">Quick Enquiry</p>
+            <h2>Schedule a Service Request</h2>
           </div>
         </Reveal>
 
