@@ -41,11 +41,11 @@ export default function Brands() {
                 className="flex flex-col border overflow-hidden"
                 style={{ borderColor: 'var(--color-border)' }}
               >
-                <div style={{ height: '220px', overflow: 'hidden' }}>
+                <div style={{ height: '220px', background: '#f8f8f8', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
                   <img
                     src={b.logo}
                     alt={`${b.name} — garage door brand stocked by Hi-Tech Doors`}
-                    className="w-full h-full object-cover"
+                    style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
                   />
                 </div>
                 <div className="flex flex-col items-center justify-center gap-1 py-5 px-4">
