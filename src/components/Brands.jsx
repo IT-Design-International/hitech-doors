@@ -1,9 +1,9 @@
 import Reveal from './Reveal'
 
 const DOOR_BRANDS = [
-  { name: 'Timbercon', logo: '/images/brand-timbercon.jpg', type: 'Sectional Doors' },
-  { name: 'Superdoors', logo: '/images/brand-superdoors.jpg', type: 'Sectional &amp; Roll-Up Doors' },
-  { name: 'Wispeco', logo: '/images/brand-wispeco.jpg', type: 'Aluminium Products' },
+  { name: 'Timbercon', logo: '/images/hitech-uses-timbercon-garage-roller-shutter-doors.jpg', type: 'Sectional Doors' },
+  { name: 'Superdoors', logo: '/images/hitech-uses-super-doors-garage-roller-shutter-doors.jpg', type: 'Sectional & Roll-Up Doors' },
+  { name: 'Wispeco', logo: '/images/hitech-uses-wispeco-garage-roller-shutter-doors.jpg', type: 'Aluminium Products' },
 ]
 
 const AUTO_BRANDS = [
@@ -35,25 +35,23 @@ export default function Brands() {
             Door Manufacturers
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
-            {DOOR_BRANDS.map((b, i) => (
+            {DOOR_BRANDS.map((b) => (
               <div
                 key={b.name}
-                className="flex flex-col items-center justify-center gap-3 p-8 border"
+                className="flex flex-col border overflow-hidden"
                 style={{ borderColor: 'var(--color-border)' }}
               >
-                <img
-                  src={b.logo}
-                  alt={`${b.name} — garage door brand stocked by Hi-Tech Doors`}
-                  className="h-12 object-contain"
-                  onError={e => {
-                    e.currentTarget.parentElement.innerHTML = `<span style="font-family:Open Sans,sans-serif;font-size:1.4rem;font-weight:700;color:var(--color-bg-deep)">${b.name}</span><span style="font-size:0.7rem;color:var(--color-text-muted);margin-top:0.25rem">${b.type}</span>`
-                  }}
-                />
-                <span
-                  className="text-xs text-center"
-                  style={{ color: 'var(--color-text-muted)' }}
-                  dangerouslySetInnerHTML={{ __html: b.type }}
-                />
+                <div style={{ height: '220px', overflow: 'hidden' }}>
+                  <img
+                    src={b.logo}
+                    alt={`${b.name} — garage door brand stocked by Hi-Tech Doors`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col items-center justify-center gap-1 py-5 px-4">
+                  <span className="font-bold text-base" style={{ fontFamily: 'Open Sans, sans-serif', color: 'var(--color-bg-deep)' }}>{b.name}</span>
+                  <span className="text-xs text-center" style={{ color: 'var(--color-text-muted)' }}>{b.type}</span>
+                </div>
               </div>
             ))}
           </div>
