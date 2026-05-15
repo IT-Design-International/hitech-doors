@@ -45,8 +45,8 @@ export default function AutomationPage() {
       features={FEATURES}
       highlights={HIGHLIGHTS}
       ctaNote="Want to automate an existing door? We can assess your current installation and recommend the right automation system."
-      metaTitle="Garage Door & Gate Automation Port Elizabeth | Hi-Tech Doors"
-      metaDescription="Garage door and gate automation for residential and commercial properties in Port Elizabeth. Hydro Doors, DigidoorIII, Gemini, Superdrive, ET Systems and Slimdrive. Installation and after-sales service."
+      metaTitle="Garage Door & Gate Automation, Port Elizabeth | Hi-Tech"
+      metaDescription="Garage door and gate automation in Port Elizabeth — DigidoorIII, Gemini, ET Systems, Slimdrive and more. Installation and after-sales service since 1997."
     />
   )
 }

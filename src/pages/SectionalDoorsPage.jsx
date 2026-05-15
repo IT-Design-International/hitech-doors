@@ -51,8 +51,8 @@ export default function SectionalDoorsPage() {
       features={FEATURES}
       highlights={HIGHLIGHTS}
       ctaNote="Not sure which door suits your opening? Call us — we'll advise on the right product for your space and budget."
-      metaTitle="Sectional Garage Doors Port Elizabeth | Hi-Tech Doors"
-      metaDescription="Premium sectional garage doors for homes and businesses across Port Elizabeth. Aluminium Alu-Lux zinc, timber, steel panel and glass fibre. Supply, install and after-sales service."
+      metaTitle="Sectional Garage Doors, Port Elizabeth | Hi-Tech Doors"
+      metaDescription="Sectional garage doors in Port Elizabeth — aluminium, timber, steel and glass fibre. Supply, install and after-sales service since 1997. Free quote."
     />
   )
 }

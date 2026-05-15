@@ -49,8 +49,8 @@ export default function AluminiumShuttersPage() {
       features={FEATURES}
       highlights={HIGHLIGHTS}
       ctaNote="Unsure whether aluminium shutters are right for your property? We'll assess your openings and recommend the best solution."
-      metaTitle="Aluminium Window Shutters Port Elizabeth | Hi-Tech Doors"
-      metaDescription="Lightweight, rust-resistant aluminium shutters for windows and openings in Port Elizabeth. Wind, rain and hail resistant. Built to last a lifetime. Supply and installation across the Eastern Cape."
+      metaTitle="Aluminium Window Shutters, Port Elizabeth | Hi-Tech"
+      metaDescription="Aluminium window shutters in Port Elizabeth — rust-free, wind, rain and hail resistant. Built to last a lifetime. Supply and installation since 1997."
     />
   )
 }

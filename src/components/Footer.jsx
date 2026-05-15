@@ -136,6 +136,16 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Legal links */}
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', padding: '1rem 0' }}>
+        <div className="container-x flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs" style={{ color: 'rgba(255,255,255,0.55)' }}>
+          <a href="/legal/privacy-policy.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/legal/paia-manual.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">PAIA Manual</a>
+          <a href="/legal/sales-terms.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Sales Terms &amp; Conditions</a>
+          <a href="/legal/website-terms.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Website Terms &amp; Conditions</a>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', padding: '1.25rem 0' }}>
         <div className="container-x flex flex-col sm:flex-row items-center justify-between gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>

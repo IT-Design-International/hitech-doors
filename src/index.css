@@ -26,7 +26,16 @@
 
   *, *::before, *::after { box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  @media (min-width: 640px) {
+    html { scroll-padding-top: 96px; }
+  }
+  @media (min-width: 768px) {
+    html { scroll-padding-top: 132px; }
+  }
 
   body {
     margin: 0;

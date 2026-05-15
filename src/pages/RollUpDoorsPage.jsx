@@ -44,8 +44,8 @@ export default function RollUpDoorsPage() {
       features={FEATURES}
       highlights={HIGHLIGHTS}
       ctaNote="Need an unusual size or have a tight ceiling clearance? We manufacture custom roll-up doors — contact us for a measurement visit."
-      metaTitle="Roll-Up Garage Doors Port Elizabeth | Hi-Tech Doors"
-      metaDescription="Compact, space-saving roll-up garage doors for homes and light commercial properties. Standard and custom sizes. Laziman Deluxe and Wespeco. Supply, install and service across Port Elizabeth."
+      metaTitle="Roll-Up Garage Doors, Port Elizabeth | Hi-Tech Doors"
+      metaDescription="Space-saving roll-up garage doors for homes and light commercial in Port Elizabeth. Standard and custom sizes — supply, install and repairs. Free quote."
     />
   )
 }

@@ -16,8 +16,8 @@ export default function LandingPage() {
   return (
     <>
       <Helmet>
-        <title>Hi-Tech Doors | Garage Doors &amp; Automation Port Elizabeth</title>
-        <meta name="description" content="Port Elizabeth's trusted garage door specialists since 1997. Sectional doors, roll-up doors, industrial roller shutters, aluminium shutters and automation. Supply, install and repairs across Gqeberha and surrounds." />
+        <title>Hi-Tech Doors | Garage Doors &amp; Automation, Port Elizabeth</title>
+        <meta name="description" content="Sectional, roll-up and industrial garage doors plus automation in Port Elizabeth. PE specialists since 1997 — supply, install and repairs. Free quote." />
       </Helmet>
 
       <NavBar />

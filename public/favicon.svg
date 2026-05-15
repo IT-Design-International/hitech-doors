@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" fill="#1C4060"/>
-  <path d="M12 28L32 12L52 28V54H12V28Z" stroke="#F47520" stroke-width="3" fill="none"/>
-  <rect x="22" y="36" width="20" height="18" stroke="#F47520" stroke-width="2" fill="none"/>
-  <line x1="22" y1="42" x2="42" y2="42" stroke="#F47520" stroke-width="1.5"/>
-  <line x1="22" y1="48" x2="42" y2="48" stroke="#F47520" stroke-width="1.5"/>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480"><defs><style>.b{fill:#fff;}.c{fill:#de2922;}</style></defs><rect class="b" x="1" y="1" width="478" height="478" rx="95.274" ry="95.274"/><polygon points="473.5 127.694 443.801 95.496 414.102 127.694 429.082 127.694 429.082 355.068 122.515 355.068 122.515 243.785 93.079 243.785 93.079 384.504 458.519 384.504 458.519 127.694 473.5 127.694"/><rect x="149.796" y="145.783" width="246.239" height="186.12"/><polygon class="c" points="6.5 243.785 277.548 247.491 396.035 145.783 149.796 145.783 6.5 243.785"/></svg>

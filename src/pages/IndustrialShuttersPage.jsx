@@ -46,8 +46,8 @@ export default function IndustrialShuttersPage() {
       features={FEATURES}
       highlights={HIGHLIGHTS}
       ctaNote="Working to a project deadline or need a site visit to assess your opening? Contact us — we handle commercial installations across the Eastern Cape."
-      metaTitle="Industrial Roller Shutters Port Elizabeth | Hi-Tech Doors"
-      metaDescription="Heavy-duty industrial roller shutters for warehouses, factories and retail stores in Port Elizabeth. Heavy-gauge steel, manual and automated. Supply, install and service across the Eastern Cape."
+      metaTitle="Industrial Roller Shutters, Port Elizabeth | Hi-Tech"
+      metaDescription="Heavy-duty industrial roller shutters for warehouses, factories and retail in Port Elizabeth. Manual or automated. Supply, install and service since 1997."
     />
   )
 }
